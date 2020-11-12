@@ -7,7 +7,7 @@ import 'package:http/http.dart' as http;
 
 Future<List<Mhs>> fetchMhss(http.Client client) async {
   final response =
-      await client.get('https://viraflutter.000webhost.com/readDatajson.php');
+      await client.get('https://viraflutter.000webhostapp.com/readDatajson.php');
 
   // Use the compute function to run parseMhss in a separate isolate.
   return compute(parseMhss, response.body);
